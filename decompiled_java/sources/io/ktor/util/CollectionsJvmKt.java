@@ -1,0 +1,18 @@
+package io.ktor.util;
+
+import io.netty.handler.ssl.OpenSslSessionTicketKey;
+import java.util.Collections;
+import java.util.Set;
+import kotlin.Metadata;
+
+/* JADX INFO: compiled from: r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da */
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\"\n\u0002\b\u0002\u001a\u001c\u0010\u0000\u001a\b\u0012\u0004\u0012\u0002H\u00020\u0001\"\u0004\b\u0000\u0010\u0002*\b\u0012\u0004\u0012\u0002H\u00020\u0001¨\u0006\u0003"}, d2 = {"unmodifiable", "", "T", "ktor-utils"}, k = 2, mv = {1, 8, 0}, xi = OpenSslSessionTicketKey.TICKET_KEY_SIZE)
+public final class CollectionsJvmKt {
+    public static final <T> Set<T> unmodifiable(Set<? extends T> set) {
+        set.getClass();
+        Set<T> setUnmodifiableSet = Collections.unmodifiableSet(set);
+        setUnmodifiableSet.getClass();
+        return setUnmodifiableSet;
+    }
+}

@@ -1,0 +1,37 @@
+package io.netty.handler.codec.http.cookie;
+
+/* JADX INFO: compiled from: r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da */
+/* JADX INFO: loaded from: classes2.dex */
+public interface Cookie extends Comparable<Cookie> {
+    public static final long UNDEFINED_MAX_AGE = Long.MIN_VALUE;
+
+    String domain();
+
+    boolean isHttpOnly();
+
+    boolean isSecure();
+
+    long maxAge();
+
+    String name();
+
+    String path();
+
+    void setDomain(String str);
+
+    void setHttpOnly(boolean z);
+
+    void setMaxAge(long j);
+
+    void setPath(String str);
+
+    void setSecure(boolean z);
+
+    void setValue(String str);
+
+    void setWrap(boolean z);
+
+    String value();
+
+    boolean wrap();
+}

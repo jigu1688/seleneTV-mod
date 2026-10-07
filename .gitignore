@@ -1,0 +1,11 @@
+# Build caches & outputs
+build_cache/
+*.tmp.apk
+*.class
+*.idsig
+
+# Python & IDE caches
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/

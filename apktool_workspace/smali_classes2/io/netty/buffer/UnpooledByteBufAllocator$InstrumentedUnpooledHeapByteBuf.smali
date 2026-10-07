@@ -1,0 +1,97 @@
+.class final Lio/netty/buffer/UnpooledByteBufAllocator$InstrumentedUnpooledHeapByteBuf;
+.super Lio/netty/buffer/UnpooledHeapByteBuf;
+.source "r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lio/netty/buffer/UnpooledByteBufAllocator;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "InstrumentedUnpooledHeapByteBuf"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Lio/netty/buffer/UnpooledByteBufAllocator;II)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Lio/netty/buffer/UnpooledHeapByteBuf;-><init>(Lio/netty/buffer/ByteBufAllocator;II)V
+
+    .line 2
+    .line 3
+    .line 4
+    return-void
+.end method
+
+
+# virtual methods
+.method public allocateArray(I)[B
+    .locals 1
+
+    .line 1
+    invoke-super {p0, p1}, Lio/netty/buffer/UnpooledHeapByteBuf;->allocateArray(I)[B
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p1
+
+    .line 5
+    invoke-virtual {p0}, Lio/netty/buffer/UnpooledHeapByteBuf;->alloc()Lio/netty/buffer/ByteBufAllocator;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    check-cast p0, Lio/netty/buffer/UnpooledByteBufAllocator;
+
+    .line 10
+    .line 11
+    array-length v0, p1
+
+    .line 12
+    invoke-virtual {p0, v0}, Lio/netty/buffer/UnpooledByteBufAllocator;->incrementHeap(I)V
+
+    .line 13
+    .line 14
+    .line 15
+    return-object p1
+.end method
+
+.method public freeArray([B)V
+    .locals 1
+
+    .line 1
+    array-length v0, p1
+
+    .line 2
+    invoke-super {p0, p1}, Lio/netty/buffer/UnpooledHeapByteBuf;->freeArray([B)V
+
+    .line 3
+    .line 4
+    .line 5
+    invoke-virtual {p0}, Lio/netty/buffer/UnpooledHeapByteBuf;->alloc()Lio/netty/buffer/ByteBufAllocator;
+
+    .line 6
+    .line 7
+    .line 8
+    move-result-object p0
+
+    .line 9
+    check-cast p0, Lio/netty/buffer/UnpooledByteBufAllocator;
+
+    .line 10
+    .line 11
+    invoke-virtual {p0, v0}, Lio/netty/buffer/UnpooledByteBufAllocator;->decrementHeap(I)V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method

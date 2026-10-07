@@ -1,0 +1,50 @@
+version: 2.10.0
+apkFileName: SeleneTV-installed.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+  tag: null
+sdkInfo:
+  minSdkVersion: 23
+  targetSdkVersion: 36
+packageInfo:
+  forcedPackageId: 127
+  renameManifestPackage: null
+versionInfo:
+  versionCode: 19
+  versionName: 1.4.6
+resourcesAreCompressed: false
+sharedLibrary: false
+sparseResources: false
+unknownFiles:
+  DebugProbesKt.bin: 8
+  custom.config.conf: 8
+  custom.config.yaml: 8
+  kotlin-tooling-metadata.json: 8
+  okhttp3/internal/publicsuffix/NOTICE: 8
+  okhttp3/internal/publicsuffix/publicsuffixes.gz: 8
+  org/fusesource/jansi/jansi.properties: 8
+  org/fusesource/jansi/jansi.txt: 8
+  org/fusesource/jansi/internal/native/Mac/arm64/libjansi.jnilib: 8
+  org/fusesource/jansi/internal/native/Mac/x86/libjansi.jnilib: 8
+  org/fusesource/jansi/internal/native/Mac/x86_64/libjansi.jnilib: 8
+  org/fusesource/jansi/internal/native/Windows/x86/jansi.dll: 8
+  org/fusesource/jansi/internal/native/Windows/x86_64/jansi.dll: 8
+doNotCompress:
+- resources.arsc
+- assets/dexopt/baseline.prof
+- assets/dexopt/baseline.profm
+- lib/arm64-v8a/libandroidx.graphics.path.so
+- lib/arm64-v8a/libavcodec.so
+- lib/arm64-v8a/libavdevice.so
+- lib/arm64-v8a/libavfilter.so
+- lib/arm64-v8a/libavformat.so
+- lib/arm64-v8a/libavutil.so
+- lib/arm64-v8a/libc++_shared.so
+- lib/arm64-v8a/libmpv.so
+- lib/arm64-v8a/libplayer.so
+- lib/arm64-v8a/libswresample.so
+- lib/arm64-v8a/libswscale.so
+- webp
+- png

@@ -1,0 +1,23 @@
+package defpackage;
+
+import android.view.RenderNode;
+
+/* JADX INFO: compiled from: r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da */
+/* JADX INFO: loaded from: classes2.dex */
+public abstract class sp3 {
+    public static int a(RenderNode renderNode) {
+        return renderNode.getAmbientShadowColor();
+    }
+
+    public static int b(RenderNode renderNode) {
+        return renderNode.getSpotShadowColor();
+    }
+
+    public static void c(RenderNode renderNode, int i) {
+        renderNode.setAmbientShadowColor(i);
+    }
+
+    public static void d(RenderNode renderNode, int i) {
+        renderNode.setSpotShadowColor(i);
+    }
+}

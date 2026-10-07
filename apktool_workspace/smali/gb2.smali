@@ -1,0 +1,11 @@
+.class public interface abstract Lgb2;
+.super Ljava/lang/Object;
+.source "r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da"
+
+# interfaces
+.implements Lhb2;
+
+
+# virtual methods
+.method public abstract e(Lib2;Lcb2;)V
+.end method

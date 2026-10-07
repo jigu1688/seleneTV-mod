@@ -1,0 +1,21 @@
+package io.netty.buffer;
+
+/* JADX INFO: compiled from: r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da */
+/* JADX INFO: loaded from: classes2.dex */
+public interface SizeClassesMetric {
+    int normalizeSize(int i);
+
+    long pageIdx2size(int i);
+
+    long pageIdx2sizeCompute(int i);
+
+    int pages2pageIdx(int i);
+
+    int pages2pageIdxFloor(int i);
+
+    int size2SizeIdx(int i);
+
+    int sizeIdx2size(int i);
+
+    int sizeIdx2sizeCompute(int i);
+}

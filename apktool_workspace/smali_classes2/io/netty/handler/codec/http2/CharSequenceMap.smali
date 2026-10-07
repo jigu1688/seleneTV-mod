@@ -1,0 +1,110 @@
+.class public final Lio/netty/handler/codec/http2/CharSequenceMap;
+.super Lio/netty/handler/codec/DefaultHeaders;
+.source "r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<V:",
+        "Ljava/lang/Object;",
+        ">",
+        "Lio/netty/handler/codec/DefaultHeaders<",
+        "Ljava/lang/CharSequence;",
+        "TV;",
+        "Lio/netty/handler/codec/http2/CharSequenceMap<",
+        "TV;>;>;"
+    }
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    const/4 v0, 0x1
+
+    .line 16
+    invoke-direct {p0, v0}, Lio/netty/handler/codec/http2/CharSequenceMap;-><init>(Z)V
+
+    return-void
+.end method
+
+.method public constructor <init>(Z)V
+    .locals 1
+
+    .line 14
+    invoke-static {}, Lio/netty/handler/codec/UnsupportedValueConverter;->instance()Lio/netty/handler/codec/UnsupportedValueConverter;
+
+    move-result-object v0
+
+    invoke-direct {p0, p1, v0}, Lio/netty/handler/codec/http2/CharSequenceMap;-><init>(ZLio/netty/handler/codec/ValueConverter;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ZLio/netty/handler/codec/ValueConverter;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z",
+            "Lio/netty/handler/codec/ValueConverter<",
+            "TV;>;)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_0
+
+    .line 15
+    sget-object p1, Lio/netty/util/AsciiString;->CASE_SENSITIVE_HASHER:Lio/netty/util/HashingStrategy;
+
+    goto :goto_0
+
+    :cond_0
+    sget-object p1, Lio/netty/util/AsciiString;->CASE_INSENSITIVE_HASHER:Lio/netty/util/HashingStrategy;
+
+    :goto_0
+    invoke-direct {p0, p1, p2}, Lio/netty/handler/codec/DefaultHeaders;-><init>(Lio/netty/util/HashingStrategy;Lio/netty/handler/codec/ValueConverter;)V
+
+    return-void
+.end method
+
+.method public constructor <init>(ZLio/netty/handler/codec/ValueConverter;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z",
+            "Lio/netty/handler/codec/ValueConverter<",
+            "TV;>;I)V"
+        }
+    .end annotation
+
+    .line 1
+    if-eqz p1, :cond_0
+
+    .line 2
+    .line 3
+    sget-object p1, Lio/netty/util/AsciiString;->CASE_SENSITIVE_HASHER:Lio/netty/util/HashingStrategy;
+
+    .line 4
+    .line 5
+    goto :goto_0
+
+    .line 6
+    :cond_0
+    sget-object p1, Lio/netty/util/AsciiString;->CASE_INSENSITIVE_HASHER:Lio/netty/util/HashingStrategy;
+
+    .line 7
+    .line 8
+    :goto_0
+    sget-object v0, Lio/netty/handler/codec/DefaultHeaders$NameValidator;->NOT_NULL:Lio/netty/handler/codec/DefaultHeaders$NameValidator;
+
+    .line 9
+    .line 10
+    invoke-direct {p0, p1, p2, v0, p3}, Lio/netty/handler/codec/DefaultHeaders;-><init>(Lio/netty/util/HashingStrategy;Lio/netty/handler/codec/ValueConverter;Lio/netty/handler/codec/DefaultHeaders$NameValidator;I)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-void
+.end method

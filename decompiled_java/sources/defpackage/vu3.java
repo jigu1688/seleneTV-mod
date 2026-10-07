@@ -1,0 +1,17 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da */
+/* JADX INFO: loaded from: classes.dex */
+public final class vu3 {
+    public final hd1 a;
+    public final hd1 b;
+
+    public vu3(hd1 hd1Var, hd1 hd1Var2) {
+        this.a = hd1Var;
+        this.b = hd1Var2;
+    }
+
+    public final String toString() {
+        return "ScrollAxisRange(value=" + ((Number) this.a.invoke()).floatValue() + ", maxValue=" + ((Number) this.b.invoke()).floatValue() + ", reverseScrolling=false)";
+    }
+}

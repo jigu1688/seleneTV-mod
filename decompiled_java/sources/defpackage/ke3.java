@@ -1,0 +1,13 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-9aab431e8ea16d2cf69658f8e3a582e2f60904597ed6ac9951ec20b137c1f3da */
+/* JADX INFO: loaded from: classes.dex */
+public final class ke3 {
+    public final int a;
+    public final qd3 b;
+
+    public ke3(int i, qd3 qd3Var) {
+        this.a = i;
+        this.b = qd3Var;
+    }
+}
