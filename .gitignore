@@ -1,5 +1,6 @@
 # Build caches & outputs
 build_cache/
+apktool_workspace/build/
 *.tmp.apk
 *.class
 *.idsig

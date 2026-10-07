@@ -69,39 +69,16 @@ for f in os.listdir(src_smali):
             fp.write(sc)
 print("    Smali files synced into apktool_workspace/smali_classes2/org/moontechlab/selenetv")
 
-# 4. Assemble DEX files
-print("\n[4/6] Assembling DEX files with smali...")
-dex1 = os.path.join(bin_dir, 'new_classes.dex')
-dex2 = os.path.join(bin_dir, 'new_classes2.dex')
-
-smali_dir1 = os.path.join(root_dir, 'apktool_workspace', 'smali')
-smali_dir2 = os.path.join(root_dir, 'apktool_workspace', 'smali_classes2')
-
-subprocess.run(f'java -jar "{smali_jar}" a "{smali_dir1}" -o "{dex1}"', shell=True, check=True)
-print("    Assembled classes.dex successfully.")
-subprocess.run(f'java -jar "{smali_jar}" a "{smali_dir2}" -o "{dex2}"', shell=True, check=True)
-print("    Assembled classes2.dex successfully.")
-
-# 5. Repackage, Align & Sign APK
-print("\n[5/6] Injecting DEX, Aligning and Signing APK...")
+# 4. Assemble APK with Apktool (assembles DEX & compiles resources including SurfaceView fix)
+print("\n[4/5] Building APK from apktool_workspace (Smali + Resources)...")
 tmp_apk = os.path.join(bin_dir, 'SeleneTV_tmp.apk')
 final_apk = os.path.join(root_dir, 'SeleneTV_N1_TVBox_Mod.apk')
+if os.path.exists(tmp_apk):
+    os.remove(tmp_apk)
 
-with open(dex1, 'rb') as f:
-    c1_data = f.read()
-with open(dex2, 'rb') as f:
-    c2_data = f.read()
-
-with zipfile.ZipFile(base_apk, 'r') as zin, zipfile.ZipFile(tmp_apk, 'w', compression=zipfile.ZIP_DEFLATED) as zout:
-    for item in zin.infolist():
-        if item.filename.startswith('META-INF/') and (item.filename.endswith('.SF') or item.filename.endswith('.RSA') or item.filename.endswith('.MF')):
-            continue
-        if item.filename == 'classes.dex':
-            zout.writestr(item.filename, c1_data)
-        elif item.filename == 'classes2.dex':
-            zout.writestr(item.filename, c2_data)
-        else:
-            zout.writestr(item, zin.read(item.filename))
+cmd_apktool_b = f'java -jar "{apktool_jar}" b "{os.path.join(root_dir, "apktool_workspace")}" -o "{tmp_apk}"'
+subprocess.run(cmd_apktool_b, shell=True, check=True)
+print("    APK assembled successfully.")
 
 if os.path.exists(final_apk):
     os.remove(final_apk)
@@ -123,6 +100,6 @@ print("    Signature verification:", "SUCCESS" if res_verify.returncode == 0 els
 
 apk_size_mb = os.path.getsize(final_apk) / (1024 * 1024)
 
-print("\n[6/6] Build Completed Successfully!")
+print("\n[5/5] Build Completed Successfully!")
 print(f"    Output APK: {final_apk} ({apk_size_mb:.2f} MB)")
 print("==================================================")
